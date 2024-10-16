@@ -1,0 +1,6 @@
+<ul class="flex flex-col gap-4 relative top-16">
+  @for (navLink of menuItems; track $index) {
+    <li class="cursor-pointer text-[var(--text-gray)] text-sm font-bold">{{ navLink | uppercase }}</li>
+  }
+</ul>
+
