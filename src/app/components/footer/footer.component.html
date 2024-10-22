@@ -1,1 +1,31 @@
-<ai-logo />
+<div class="wrapper">
+    <div class="section">
+        <div class="title">COMPANY INFO</div>
+        <a routerLink="/about">About Sports Hub</a>
+        <a routerLink="/press">News / In the Press</a>
+        <a routerLink="/advertising">Advertising / Sports Blogger Ad Network</a>
+        <a routerLink="/events">Events</a>
+        <a routerLink="/contact">Contact Us</a>
+    </div>
+    <div class="section">
+        <div class="title">CONTRIBUTORS</div>
+        <a routerLink="/featured-writers">Featured Writers Program</a>
+        <a routerLink="/featured-team-writers">Featured Team Writers Program</a>
+        <a routerLink="/internship">Internship Program</a>
+    </div>
+    <div class="section">
+        <div class="title">NEWSLETTER</div>
+        <div>Sign up to receive the latest sports news</div>
+        <div class="email">
+            <input type="email" [formControl]="emailFormControl" placeholder="Your email address">
+            <button>Subscribe</button>
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <ai-logo />
+    <div class="copyright">
+        <div>Copyright ©{{currentYear}} Sports Hub</div>
+        <div><a routerLink="/privacy">Privacy</a> / <a routerLink="/terms">Terms</a></div>
+    </div>
+</div>

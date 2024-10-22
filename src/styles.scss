@@ -41,4 +41,25 @@ p, h1, h2, h3, h4, h5, h6 {
   --primary-red: #D72130;
   --text-light: #FFFBFB;
   --text-gray: #B2B2B2;
+  --text-dark-gray: #7F7B7B;
+  --gray: #7F8899;
+  --gray-two: #EDEDED;
+  --gray-light: #F6F6F6;
+  --black: #000000;
+  --black-two: #2B2F43;
+  --white: #FFF5F5;
+  --red: #C63638;
+  --red-two: #D72130;
 }
+
+.watermark {
+    font-family: "Roboto Condensed";
+    font-size: 141px;
+    line-height: 192px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    color: #CCD3E04D;
+    writing-mode: vertical-rl;
+    position: absolute;
+    user-select: none;
+  }

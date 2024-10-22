@@ -1,6 +1,26 @@
-<ul class="flex flex-col gap-4 relative top-16">
-  @for (navLink of menuItems; track $index) {
-    <li class="cursor-pointer text-[var(--text-gray)] text-sm font-bold">{{ navLink | uppercase }}</li>
-  }
-</ul>
+<div class="navigation">
+  <ul class="flex flex-col gap-4">
+    @for (navLink of menuItems; track $index) {
+    <li class="cursor-pointer text-[var(--text-gray)] text-sm font-bold" [routerLink]="navLink | lowercase">{{ navLink |
+      uppercase }}</li>
+    }
+  </ul>
+</div>
 
+<div class="follow">
+  <div class="title">Follow</div>
+  <div class="grid">
+    <a routerLink="follow-facebook">
+      <mat-icon svgIcon="facebook" aria-hidden="false" aria-label="Follow us on Facebook"></mat-icon>
+    </a>
+    <a routerLink="follow-twitter">
+      <mat-icon svgIcon="twitter" aria-hidden="false" aria-label="Follow us on Twitter"></mat-icon>
+    </a>
+    <a routerLink="follow-google">
+      <mat-icon svgIcon="google" aria-hidden="false" aria-label="Follow us on Google"></mat-icon>
+    </a>
+    <a routerLink="follow-youtube">
+      <mat-icon svgIcon="youtube" aria-hidden="false" aria-label="Follow us on Youtube"></mat-icon>
+    </a>
+  </div>
+</div>

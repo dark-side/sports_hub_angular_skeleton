@@ -46,5 +46,9 @@
   "resolutions": {
     "string-width": "4.2.3",
     "wrap-ansi": "7.0.0"
+  },
+  "volta": {
+    "node": "20.11.1",
+    "npm": "10.2.4"
   }
 }

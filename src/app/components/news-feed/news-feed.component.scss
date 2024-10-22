@@ -1,7 +1,208 @@
 :host {
-  display: block;
+  display: flex;
   height: 100%;
   flex: 1;
 
-  background-color: cadetblue;
+  .content {
+    width: 815px;
+    height: 100%;
+    margin-bottom: 80px;
+
+    .photo-container {
+      height: 460px;
+      margin-bottom: 20px;
+      position: relative;
+
+      .photo {
+        width: 100%;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        width: 420px;
+        height: 290px;
+        background-color: var(--gray-light);
+        position: absolute;
+        top: 85px;
+        left: 625px;
+        padding: 40px 20px 20px 20px;
+        z-index: 100;
+
+        .publish {
+          font-family: "Roboto";
+          font-size: 14px;
+          line-height: 17px;
+          margin-bottom: 15px;
+          color: var(--text-dark-gray);
+        }
+
+        .title {
+          font-family: "Open Sans";
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 22px;
+          margin-bottom: 15px;
+          color: var(--red);
+        }
+
+        .body {
+          font-family: "Open Sans";
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 30px;
+          color: var(--black-two);
+        }
+
+        .share {
+          display: flex;
+          align-items: center;
+          height: 42px;
+          width: 100%;
+          margin-top: auto;
+          color: var(--text-dark-gray);
+
+          mat-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    .main {
+      width: 100%;
+      margin-bottom: 120px;
+
+      .article-card {
+        display: flex;
+        width: 100%;
+        height: 182px;
+        padding: 10px;
+        background: #FFFFFF;
+        border: 1px solid var(--gray-two);
+        box-shadow: 0px 2px 24px 0px #0000001C;
+        margin: 10px 0;
+
+        img {
+          width: 285px;
+          height: 160px;
+          margin-right: 20px;
+        }
+
+        .article-wrapper {
+          display: flex;
+          flex-direction: column;
+          margin-right: 50px;
+
+          .article-title {
+            font-family: "Open Sans";
+            font-size: 16px;
+            line-height: 22px;
+            color: var(--black-two);
+            margin-bottom: 10px;
+          }
+
+          .article-content {
+            font-family: "Open Sans";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 19px;
+            color: var(--text-dark-gray);
+          }
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      width: 100%;
+
+      .left,
+      .right {
+        height: 100%;
+        flex-grow: 1;
+      }
+
+      .left {
+        margin-right: 20px;
+      }
+
+      .bottom-title {
+        display: flex;
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19px;
+        height: 19px;
+        margin-bottom: 20px;
+
+        .name {
+          margin-right: 10px;
+        }
+
+        .divider {
+          border: 1px solid var(--text-gray);
+          align-self: flex-end;
+          flex: 1;
+        }
+      }
+
+      .mini-card {
+        display: flex;
+        width: 100%;
+        height: 98px;
+        background: #FFFFFF;
+        border: 1px solid var(--gray-two);
+
+        img {
+          width: 178px;
+          height: 97px;
+          margin-right: 15px;
+        }
+
+        .mini-wrapper {
+          display: flex;
+          flex-direction: column;
+          margin-right: 30px;
+
+          .mini-title {
+            font-family: "Open Sans";
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 22px;
+            color: var(--black-two);
+            margin: 10px 0 5px 0;
+          }
+
+          .mini-content {
+            font-family: "Open Sans";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 19px;
+            color: var(--text-dark-gray);
+          }
+        }
+      }
+    }
+  }
+
+  .side {
+    width: calc(100% - 815px);
+    position: relative;
+
+    .cards {
+      width: 285px;
+      height: 1175px;
+      background-color: yellow;
+      margin-top: 750px;
+      margin-left: 20px;
+    }
+  }
+
+  .watermark-2 {
+    left: 60px;
+    top: 360px;
+  }
 }

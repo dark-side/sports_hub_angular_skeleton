@@ -1,1 +1,28 @@
 <ai-logo />
+<div class="search">
+    <mat-icon svgIcon="search" aria-hidden="false"></mat-icon>
+    <input matInput placeholder="Search by">
+</div>
+<div class="social">
+    <div class="share">Share</div>
+    <a routerLink="share-facebook">
+        <mat-icon svgIcon="facebook" aria-hidden="false" aria-label="Share with Facebook"></mat-icon>
+    </a>
+    <a routerLink="share-twitter">
+        <mat-icon svgIcon="twitter" aria-hidden="false" aria-label="Share with Twitter"></mat-icon>
+    </a>
+    <a routerLink="share-google">
+        <mat-icon svgIcon="gmail" aria-hidden="false" aria-label="Share with Gmail"></mat-icon>
+    </a>
+</div>
+<div class="login">
+    <a routerLink="/sign-up">Sign up</a>
+    <a routerLink="/log-in" class="log-in">Log in</a>
+</div>
+<div class="lang">
+    <select [formControl]="lang">
+        <option value="en">EN</option>
+        <option value="ge">GE</option>
+        <option value="fr">FR</option>
+    </select>
+</div>

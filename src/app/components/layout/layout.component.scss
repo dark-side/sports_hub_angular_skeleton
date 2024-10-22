@@ -1,9 +1,53 @@
 :host {
   display: block;
-  height: -webkit-fill-available;
-}
 
-.container {
-  height: -webkit-fill-available;
-  padding: 4rem 2rem 0 2rem;
+  mat-drawer-container {
+    background-color: initial;
+  }
+
+  .container {
+    padding: 0 2rem;
+    margin-top: 4rem;
+
+    mat-drawer {
+      overflow: hidden;
+    }
+  }
+
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 17px;
+    margin-bottom: 20px;
+    color: var(--text-gray);
+
+    a {
+      &:last-of-type {
+        color: var(--red-two);
+      }
+    }
+
+    mat-icon {
+      margin: 0 5px;
+      height: 10px;
+      width: 5px;
+
+      &:last-of-type {
+        ::ng-deep {
+          path {
+            fill: var(--red-two);
+          }
+        }
+      }
+    }
+  }
+
+  .watermark-1 {
+    left: 290px;
+    top: 160px;
+    z-index: 25;
+  }
 }

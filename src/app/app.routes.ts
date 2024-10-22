@@ -5,13 +5,17 @@ export const routes: Routes = [{
   path: '',
   children: [
     {
+      path: 'feed',
+      component: NewsFeedComponent
+    },
+    {
       path: '',
       pathMatch: 'full',
       redirectTo: 'feed',
     },
-    {
-      path: 'feed',
-      component: NewsFeedComponent
-    }
+    // {
+    //   path: '**',
+    //   redirectTo: 'feed'
+    // },
   ]
 }];

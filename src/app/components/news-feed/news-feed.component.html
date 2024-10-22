@@ -1,1 +1,56 @@
-<p>news-feed works!</p>
+<div class="content">
+    <div class="photo-container">
+        <img class="photo" src="/photo/Main photo article.png" alt="Main article" />
+        <div class="info">
+            <div class="publish">Published / 20.09.2019</div>
+            <div class="title">London Games return in 2019</div>
+            <div class="body">Register to receive the latest news on ticket sales for the four NBA London Games in 2019!
+            </div>
+            <a class="share" routerLink="share">
+                <mat-icon svgIcon="share" aria-hidden="false" aria-label="Share"></mat-icon>
+                <span>Share</span>
+            </a>
+        </div>
+    </div>
+    <div class="main">
+        <a class="article-card" [routerLink]="article.link" *ngFor="let article of articles">
+            <img [src]="article.image" alt="Article">
+            <div class="article-wrapper">
+                <div class="article-title">{{ article.title }}</div>
+                <div class="article-content">{{ article.content }}</div>
+            </div>
+        </a>
+    </div>
+    <div class="bottom">
+        <div class="left">
+            <div class="bottom-title">
+                <div class="name">MOST POPULAR</div>
+                <div class="divider"></div>
+            </div>
+            <a class="mini-card" [routerLink]="article.link" *ngFor="let article of popular">
+                <img [src]="article.image" alt="Popular">
+                <div class="mini-wrapper">
+                    <div class="mini-title">{{ article.title }}</div>
+                    <div class="mini-content">{{ article.content }}</div>
+                </div>
+            </a>
+        </div>
+        <div class="right">
+            <div class="bottom-title">
+                <div class="name">MOST COMMENTED</div>
+                <div class="divider"></div>
+            </div>
+            <a class="mini-card" [routerLink]="article.link" *ngFor="let article of commented">
+                <img [src]="article.image" alt="Popular">
+                <div class="mini-wrapper">
+                    <div class="mini-title">{{ article.title }}</div>
+                    <div class="mini-content">{{ article.content }}</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="side">
+    <div class="watermark watermark-2">NEWS</div>
+    <div class="cards"></div>
+</div>

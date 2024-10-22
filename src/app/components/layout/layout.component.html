@@ -4,8 +4,16 @@
     <ai-sidenav />
   </mat-drawer>
 
-  <mat-drawer-content> 
+  <mat-drawer-content>
+    <div class="breadcrumbs">
+      <a routerLink="/nfl">NFL</a>
+      <mat-icon svgIcon="arrow-right" aria-hidden="false"></mat-icon>
+      <a routerLink="/afc-south">AFC South</a>
+      <mat-icon svgIcon="arrow-right" aria-hidden="false"></mat-icon>
+      <a>Tennessee</a>
+    </div>
     <router-outlet />
   </mat-drawer-content>
 </mat-drawer-container>
 <ai-footer />
+<div class="watermark watermark-1">Tennessee</div>

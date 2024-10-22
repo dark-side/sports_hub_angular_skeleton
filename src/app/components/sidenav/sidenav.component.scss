@@ -1,3 +1,35 @@
 :host {
   display: block;
+
+  .navigation {
+    margin: 4rem 0;
+  }
+
+  .follow {
+    width: 76px;
+    height: 92px;
+
+    .title {
+      font-family: 'Roboto';
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      color: var(--text-gray);
+      margin-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      a {
+        margin-bottom: 15px;
+
+        [svgIcon="google"] {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
 }

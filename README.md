@@ -1,5 +1,18 @@
 # AngularjsFeGenaiPlgrnd
 
+## Project Description
+
+This is a draft pet project for testing Generative AI on different software engineering tasks. It is planned to evolve and grow over time. Specifically, this repo will be a Angular playground.
+For now, we only have the:
+[Ruby on Rails](https://github.com/rtriska/ruby_be_genai_plgrnd),
+[PHP](https://github.com/rtriska/php_be_genai_plgrnd),
+[Java](https://github.com/rtriska/java_be_genai_plgrnd),
+[.Net](https://github.com/rtriska/net_be_genai_plgrnd)
+applications as a Back-End, but we plan to extend it to other technologies in the future.
+This application can be started with a `docker compose` using the Back-End applications mentioned.
+
+The application's legend is based on the sports-hub application description from the following repo: [Sports-Hub](https://github.com/dark-side/sports-hub).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
 
 ## Development server
@@ -25,3 +38,17 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## License
+
+Licensed under either of
+
+- [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+- [MIT license](http://opensource.org/licenses/MIT)
+
+Just to let you know, at your option.
+
+## Contribution
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in your work, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.
+
+**Should you have any suggestions, please create an Issue for this repository**
