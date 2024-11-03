@@ -5,8 +5,11 @@
     padding: 10px;
     background: #FFFFFF;
     border: 1px solid var(--gray-two);
-    box-shadow: 0px 2px 24px 0px #0000001C;
-    margin: 10px 0;
+    &:hover {
+        margin: 10px 0;
+        box-shadow: 0px 2px 24px 0px #0000001C;
+        transition: margin 500ms ease-in-out, box-shadow 100ms ease-in-out;
+    }
 
     img {
         width: 285px;

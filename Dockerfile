@@ -1,4 +1,4 @@
-FROM node:latest as builder
+FROM node:latest
 
 WORKDIR /usr/src/app
 
@@ -8,6 +8,4 @@ RUN yarn install
 
 COPY . .
 
-EXPOSE 4200
-
-CMD [ "yarn", "start" ]
+CMD ["yarn", "run", "ng", "serve", "--", "--host", "0.0.0.0", "--port", "3000"]
