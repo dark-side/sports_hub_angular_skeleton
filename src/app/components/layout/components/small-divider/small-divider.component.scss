@@ -1,0 +1,20 @@
+.title {
+    display: flex;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    height: 19px;
+    margin-bottom: 20px;
+
+    .name {
+      margin-right: 10px;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      border: 1px solid var(--text-gray);
+      align-self: flex-end;
+      flex: 1;
+    }
+  }

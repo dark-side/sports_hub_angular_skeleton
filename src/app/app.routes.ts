@@ -1,21 +1,42 @@
 import { Routes } from '@angular/router';
-import { NewsFeedComponent } from './components/news-feed/news-feed.component';
+import { ArticleComponent } from './components/layout/article/article.component';
+import { LoginComponent } from './components/login/login.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { NewsFeedComponent } from './components/layout/news-feed/news-feed.component';
 
 export const routes: Routes = [{
   path: '',
   children: [
     {
-      path: 'feed',
-      component: NewsFeedComponent
+      path: 'log-in',
+      component: LoginComponent
+    },
+    {
+      path: 'sign-up',
+      component: LoginComponent
     },
     {
       path: '',
       pathMatch: 'full',
-      redirectTo: 'feed',
+      redirectTo: 'feed'
+    },
+    {
+      path: '',
+      component: LayoutComponent,
+      children: [
+        {
+          path: 'article/:id',
+          component: ArticleComponent
+        },
+        {
+          path: 'feed',
+          component: NewsFeedComponent
+        }
+      ]
     },
     // {
     //   path: '**',
     //   redirectTo: 'feed'
-    // },
+    // }
   ]
 }];

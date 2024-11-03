@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LogoComponent } from '../logo/logo.component';
+import { LogoComponent } from '../../../logo/logo.component';
 import { RouterLink } from '@angular/router';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 

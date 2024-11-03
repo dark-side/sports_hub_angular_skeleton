@@ -3,15 +3,17 @@ import { RouterOutlet } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { facebook } from './components/svg/facebook.svg';
-import { gmail } from './components/svg/gmail.svg';
-import { google } from './components/svg/google.svg';
-import { twitter } from './components/svg/twitter.svg';
-import { youtube } from './components/svg/youtube.svg';
-import { search } from './components/svg/search.svg';
-import { share } from './components/svg/share.svg';
-import { thumb } from './components/svg/thumb.svg';
-import { arrowRight } from './components/svg/arrow-right.svg';
+import { facebook } from './svg/facebook.svg';
+import { gmail } from './svg/gmail.svg';
+import { google } from './svg/google.svg';
+import { twitter } from './svg/twitter.svg';
+import { youtube } from './svg/youtube.svg';
+import { search } from './svg/search.svg';
+import { share } from './svg/share.svg';
+import { thumb } from './svg/thumb.svg';
+import { arrowRight } from './svg/arrow-right.svg';
+import { fbCircle } from './svg/fb-circle.svg';
+import { gmailCircle } from './svg/gmail-circle.svg';
 
 @Component({
   selector: 'app-root',
@@ -35,5 +37,7 @@ export class AppComponent {
     iconRegistry.addSvgIconLiteral('share', sanitizer.bypassSecurityTrustHtml(share));
     iconRegistry.addSvgIconLiteral('thumb', sanitizer.bypassSecurityTrustHtml(thumb));
     iconRegistry.addSvgIconLiteral('arrow-right', sanitizer.bypassSecurityTrustHtml(arrowRight));
+    iconRegistry.addSvgIconLiteral('fb-circle', sanitizer.bypassSecurityTrustHtml(fbCircle));
+    iconRegistry.addSvgIconLiteral('gmail-circle', sanitizer.bypassSecurityTrustHtml(gmailCircle));
   }
 }

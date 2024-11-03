@@ -1,0 +1,40 @@
+<div class="left">
+    <a routerLink="/" class="logo">
+        <ai-logo />
+    </a>
+    <img src="photo/login.png" alt="Login page" draggable="false">
+</div>
+<div class="right">
+    <div class="top">
+        <div class="text">Don’t have an account?</div>
+        <a class="button" routerLink="/start">Get Started</a>
+    </div>
+    <div class="main">
+        <div class="section">
+            <div class="section-text">Log in to Sports Hub</div>
+            <div class="social">
+                <a routerLink="/facebook">
+                    <mat-icon svgIcon="fb-circle" aria-hidden="false" aria-label="Facebook"></mat-icon>
+                </a>
+                <a routerLink="/gmail">
+
+                    <mat-icon svgIcon="gmail-circle" aria-hidden="false" aria-label="Gmail"></mat-icon>
+                </a>
+            </div>
+            <div class="input">
+                <div class="top-section">
+                    <div class="field-text">Email address</div>
+                </div>
+                <input type="email">
+            </div>
+            <div class="input">
+                <div class="top-section">
+                    <div class="field-text">Password</div>
+                    <a class="forgot" routerLink="/forgot">Forgot password?</a>
+                </div>
+                <input type="email">
+            </div>
+            <button (click)="onSave()">Log in</button>
+        </div>
+    </div>
+</div>

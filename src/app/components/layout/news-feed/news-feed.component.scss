@@ -1,0 +1,52 @@
+:host {
+  display: flex;
+  height: 100%;
+  flex: 1;
+
+  .content {
+    width: 815px;
+    height: 100%;
+    margin-bottom: 80px;
+
+    .main {
+      width: 100%;
+      margin-bottom: 120px;
+    }
+
+    .bottom {
+      display: flex;
+      width: 100%;
+
+      .left,
+      .right {
+        height: 100%;
+        flex-grow: 1;
+      }
+
+      .left {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .side {
+    width: calc(100% - 815px);
+    position: relative;
+
+    .cards {
+      width: 285px;
+      margin-top: 750px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+
+      ai-side-card:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .watermark-2 {
+    left: 60px;
+    top: 360px;
+  }
+}

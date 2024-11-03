@@ -1,4 +1,6 @@
-<ai-logo />
+<a routerLink="/">
+    <ai-logo />
+</a>
 <div class="search">
     <mat-icon svgIcon="search" aria-hidden="false"></mat-icon>
     <input matInput placeholder="Search by">
@@ -22,6 +24,7 @@
 <div class="lang">
     <select [formControl]="lang">
         <option value="en">EN</option>
+        <option value="ua">UA</option>
         <option value="ge">GE</option>
         <option value="fr">FR</option>
     </select>

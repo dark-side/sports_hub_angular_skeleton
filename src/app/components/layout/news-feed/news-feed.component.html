@@ -1,0 +1,22 @@
+<div class="content">
+    <ai-photo-container/>
+    <div class="main">
+        <ai-card *ngFor="let article of articles" [article]="article"/>
+    </div>
+    <div class="bottom">
+        <div class="left">
+            <ai-small-divider title="MOST POPULAR"/>
+            <ai-card *ngFor="let article of popular" [article]="article" class="mini"/>
+        </div>
+        <div class="right">
+            <ai-small-divider title="MOST COMMENTED"/>
+            <ai-card *ngFor="let article of commented" [article]="article" class="mini"/>
+        </div>
+    </div>
+</div>
+<div class="side">
+    <div class="watermark watermark-2">NEWS</div>
+    <div class="cards">
+        <ai-side-card *ngFor="let article of side" [article]="article"></ai-side-card>
+    </div>
+</div>

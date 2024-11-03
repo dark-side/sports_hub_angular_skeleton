@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../navbar/navbar.component';
-import { FooterComponent } from '../footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { SidenavComponent } from '../sidenav/sidenav.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({

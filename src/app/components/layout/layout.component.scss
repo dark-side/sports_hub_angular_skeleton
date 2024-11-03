@@ -3,6 +3,7 @@
 
   mat-drawer-container {
     background-color: initial;
+    min-height: calc(100vh - 80px - 128px);
   }
 
   .container {
@@ -10,6 +11,10 @@
     margin-top: 4rem;
 
     mat-drawer {
+      overflow: hidden;
+    }
+
+    mat-drawer-content {
       overflow: hidden;
     }
   }
@@ -26,7 +31,7 @@
 
     a {
       &:last-of-type {
-        color: var(--red-two);
+        color: var(--primary-red);
       }
     }
 
@@ -38,7 +43,7 @@
       &:last-of-type {
         ::ng-deep {
           path {
-            fill: var(--red-two);
+            fill: var(--primary-red);
           }
         }
       }
