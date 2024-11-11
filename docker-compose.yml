@@ -1,3 +1,7 @@
+x-frontend-variables: &frontend-variables
+  environment:
+    API_URL: http://localhost:3002
+
 version: '3.1'
 services:
   frontend:
@@ -5,3 +9,4 @@ services:
     ports:
       - 3000:3000
     restart: always  
+    <<: *frontend-variables

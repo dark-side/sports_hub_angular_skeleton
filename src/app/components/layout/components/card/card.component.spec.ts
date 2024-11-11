@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CardComponent } from './card.component';
+import { RouterModule } from '@angular/router';
 
 describe('NavbarComponent', () => {
   let component: CardComponent;
@@ -7,7 +8,10 @@ describe('NavbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CardComponent]
+      imports: [
+        CardComponent,
+        RouterModule.forRoot([{ path: '**', component: CardComponent }]),
+      ]
     })
     .compileComponents();
 

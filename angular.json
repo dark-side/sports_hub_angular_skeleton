@@ -99,7 +99,19 @@
               "@angular/material/prebuilt-themes/rose-red.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "karmaConfig": "karma.conf.js"
+          }
+        },
+        "e2e": {
+          "builder": "playwright-ng-schematics:playwright",
+          "options": {
+            "devServerTarget": "angularjs_fe_genai_plgrnd:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angularjs_fe_genai_plgrnd:serve:production"
+            }
           }
         }
       }

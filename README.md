@@ -35,6 +35,57 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
+## Dependencies
+
+- Docker
+- Docker Compose
+
+The mentioned dependencies can be installed using the official documentation [here](https://docs.docker.com/compose/install/).
+
+## Setup and Running the Application
+
+### Clone the Repositories
+
+To run the web application with the back-end, clone the following repository within the same folder:
+
+```sh
+Ruby
+git clone git@github.com:rtriska/ruby_be_genai_plgrnd.git
+
+PHP
+git clone git@github.com:rtriska/php_be_genai_plgrnd.git
+
+Java
+git clone git@github.com:rtriska/java_be_genai_plgrnd.git
+
+.Net
+git clone git@github.com:rtriska/net_be_genai_plgrnd.git
+```
+
+### Change Frontend
+
+In docker-compose.yml at the back-end application directory change the front-end directory to the current one:
+
+```sh
+  frontend:
+    build: ../angularjs_fe_genai_plgrnd <--- Here
+    depends_on:
+      - backend
+    ports:
+      - 3000:3000
+    restart: always
+    <<: *frontend-variables
+```
+
+### Run Docker Compose
+
+Navigate to the back-end application directory and run:
+
+```sh
+docker compose up
+```
+
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

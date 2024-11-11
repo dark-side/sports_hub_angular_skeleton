@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SideCardComponent } from './side-card.component';
+import { RouterModule } from '@angular/router';
 
 describe('NavbarComponent', () => {
   let component: SideCardComponent;
@@ -7,7 +8,10 @@ describe('NavbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SideCardComponent]
+      imports: [
+        SideCardComponent,
+        RouterModule.forRoot([{ path: '**', component: SideCardComponent }]),
+      ]
     })
     .compileComponents();
 
