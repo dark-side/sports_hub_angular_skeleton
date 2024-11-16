@@ -1,10 +1,10 @@
-<div class="side-card" [ngClass]="{'space': !article.title}">
-    <a class="side-main" [routerLink]="article.link">
+<div *ngIf="article" class="side-card" [ngClass]="{'space': !article.title}">
+    <a class="side-main" [routerLink]="article.id">
         <div class="side-main-part">
             <div *ngIf="article.title" class="card-title">{{article.title}}</div>
-            <img [src]="article.image" alt="Facebook">
+            <img [src]="article.image_url" alt="Facebook">
         </div>
-        <div *ngIf="article.content" class="card-text">{{article.content}}</div>
+        <div *ngIf="article.short_description" class="card-text">{{article.short_description}}</div>
     </a>
     <div class="card-action" *ngIf="article.like">
         <div class="card-like">Like us on Facebook</div>

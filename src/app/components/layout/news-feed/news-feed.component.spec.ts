@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NewsFeedComponent } from './news-feed.component';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideHttpClient } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { IconModule } from '../../../services/svg-register.service';
 
 describe('NewsFeedComponent', () => {
   let component: NewsFeedComponent;
@@ -12,14 +12,14 @@ describe('NewsFeedComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         NewsFeedComponent,
-        RouterModule.forRoot([{ path: '**', component: NewsFeedComponent }]),
+        IconModule
       ],
       providers: [
         provideHttpClient(),
         provideHttpClientTesting()
       ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(NewsFeedComponent);
     component = fixture.componentInstance;

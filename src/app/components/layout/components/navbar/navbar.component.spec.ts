@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NavbarComponent } from './navbar.component';
 import { RouterModule } from '@angular/router';
+import { IconModule } from '../../../../services/svg-register.service';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
@@ -10,10 +11,11 @@ describe('NavbarComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         NavbarComponent,
-        RouterModule.forRoot([{ path: '**', component: NavbarComponent }]),
+        IconModule,
+        RouterModule.forRoot([{ path: '**', component: NavbarComponent }])
       ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(NavbarComponent);
     component = fixture.componentInstance;

@@ -1,10 +1,9 @@
-<div class="photo-container">
-    <img class="photo" src="/photo/Main photo article.png" alt="Main article" />
+<div *ngIf="article" class="photo-container">
+    <img class="photo" [src]="article.image_url" alt="Main article" />
     <div class="info">
-        <div class="publish">Published / 20.09.2019</div>
-        <div class="title">London Games return in 2019</div>
-        <div class="body">Register to receive the latest news on ticket sales for the four NBA London Games in 2019!
-        </div>
+        <div class="publish">Published / {{ article.created_at | date: 'dd.MM.yyyy'}}</div>
+        <div class="title">{{article.title}}</div>
+        <div class="body">{{article.short_description}}</div>
 
         <a *ngIf="router.url.includes('article'); else more" class="share" routerLink="/share">
             <mat-icon svgIcon="share" aria-hidden="false" aria-label="Share"></mat-icon>

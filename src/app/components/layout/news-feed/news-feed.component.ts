@@ -1,21 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { RouterLink } from '@angular/router';
 import { PhotoContainerComponent } from '../components/photo-container/photo-container.component';
 import { CardComponent } from '../components/card/card.component';
 import { SmallDividerComponent } from '../components/small-divider/small-divider.component';
 import { SideCardComponent } from '../components/side-card/side-card.component';
 import { articles2, commented, popular, side } from './mock/mock';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'ai-news-feed',
   standalone: true,
   imports: [
     CommonModule,
-    MatIconModule,
-    RouterLink,
     PhotoContainerComponent,
     CardComponent,
     SmallDividerComponent,
@@ -25,10 +22,10 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './news-feed.component.scss'
 })
 export class NewsFeedComponent {
-  articles: any;
-  popular = popular;
-  commented = commented;
-  side = side;
+  articles: any = [];
+  popular: any = [];
+  commented: any = [];
+  side: any = [];
 
   private readonly http = inject(HttpClient);
 
@@ -37,14 +34,22 @@ export class NewsFeedComponent {
   }
 
   private getArticles() {
-    this.http.get('http://localhost:3002/articles/').subscribe({
+    this.http.get(`${environment['API_URL']}/articles/`).subscribe({
       next: (articles: any) => {
-        console.log("*******************articles********", articles)
         this.articles = articles;
+        this.popular = this.findMost('article_likes');
+        this.commented = this.findMost('comments_count');
       },
-      error: (error) => {
+      error: () => {
         this.articles = articles2;
+        this.popular = popular;
+        this.commented = commented;
+        this.side = side;
       }
     });
+  }
+
+  private findMost(type: string) {
+    return this.articles.toSorted((a: any, b: any) => b[type] - a[type]).slice(0, 3);
   }
 }

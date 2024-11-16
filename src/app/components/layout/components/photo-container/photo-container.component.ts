@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterLink } from '@angular/router';
 
@@ -11,5 +11,7 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './photo-container.component.scss'
 })
 export class PhotoContainerComponent {
+  @Input() article: any;
+
   public readonly router = inject(Router);
 }

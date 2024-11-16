@@ -1,13 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PhotoContainerComponent } from './photo-container.component';
+import { IconModule } from '../../../../services/svg-register.service';
+import { RouterModule } from '@angular/router';
 
-describe('NavbarComponent', () => {
+describe('PhotoContainerComponent', () => {
   let component: PhotoContainerComponent;
   let fixture: ComponentFixture<PhotoContainerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PhotoContainerComponent]
+      imports: [
+        PhotoContainerComponent,
+        IconModule,
+        RouterModule.forRoot([{ path: '**', component: PhotoContainerComponent }])
+      ]
     })
     .compileComponents();
 

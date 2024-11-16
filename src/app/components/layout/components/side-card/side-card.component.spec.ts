@@ -1,8 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SideCardComponent } from './side-card.component';
 import { RouterModule } from '@angular/router';
+import { IconModule } from '../../../../services/svg-register.service';
 
-describe('NavbarComponent', () => {
+describe('SideCardComponent', () => {
   let component: SideCardComponent;
   let fixture: ComponentFixture<SideCardComponent>;
 
@@ -10,6 +11,7 @@ describe('NavbarComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         SideCardComponent,
+        IconModule,
         RouterModule.forRoot([{ path: '**', component: SideCardComponent }]),
       ]
     })

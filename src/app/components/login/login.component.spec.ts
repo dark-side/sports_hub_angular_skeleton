@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LoginComponent } from './login.component';
 import { RouterModule } from '@angular/router';
+import { IconModule } from '../../services/svg-register.service';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -10,6 +11,7 @@ describe('LoginComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         LoginComponent,
+        IconModule,
         RouterModule.forRoot([{ path: '**', component: LoginComponent }]),
       ]
     })

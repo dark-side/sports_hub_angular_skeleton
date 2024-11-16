@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SidenavComponent } from './sidenav.component';
 import { RouterModule } from '@angular/router';
+import { IconModule } from '../../../../services/svg-register.service';
 
 describe('SidenavComponent', () => {
   let component: SidenavComponent;
@@ -10,6 +11,7 @@ describe('SidenavComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         SidenavComponent,
+        IconModule,
         RouterModule.forRoot([{ path: '**', component: SidenavComponent }]),
       ]
     })

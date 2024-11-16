@@ -1,4 +1,4 @@
-import { inject, Injectable } from "@angular/core";
+import { inject, NgModule } from "@angular/core";
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
 import { arrowRight } from "../svg/arrow-right.svg";
@@ -13,12 +13,12 @@ import { twitter } from "../svg/twitter.svg";
 import { youtube } from "../svg/youtube.svg";
 import { share } from "../svg/share.svg";
 
-@Injectable()
-export class SvgRegisterService {
+@NgModule()
+export class IconModule {
   private readonly iconRegistry = inject(MatIconRegistry);
   private readonly sanitizer = inject(DomSanitizer);
 
-  init() {
+  constructor() {
     this.iconRegistry.addSvgIconLiteral('facebook', this.sanitizer.bypassSecurityTrustHtml(facebook));
     this.iconRegistry.addSvgIconLiteral('twitter', this.sanitizer.bypassSecurityTrustHtml(twitter));
     this.iconRegistry.addSvgIconLiteral('google', this.sanitizer.bypassSecurityTrustHtml(google));

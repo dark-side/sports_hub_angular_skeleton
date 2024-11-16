@@ -1,4 +1,4 @@
-{
+export default {
     "/api": {
         "target": "http://localhost:3002",
         "secure": false,
