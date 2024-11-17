@@ -59,9 +59,6 @@
         height: calc(100% - 62px);
 
         .section {
-            width: 390px;
-            height: 314px;
-
             .section-text {
                 font-family: Open Sans;
                 font-size: 24px;
@@ -86,8 +83,21 @@
                 }
             }
 
+            .top-title {
+                font-family: "Open Sans";
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 17px;
+            }
+
             .input {
+                height: 82px;
                 &:not(:first-child) {
+                    margin-top: 5px;
+                }
+
+                &-double.input {
+                    display: flex;
                     margin-top: 20px;
                 }
 
@@ -97,6 +107,15 @@
                     font-weight: 500;
                     line-height: 11px;
                     color: var(--gray);
+                    text-transform: uppercase;
+                }
+
+                .top-half {
+                    width: 178px;
+
+                    &:first-child {
+                        margin-right: 40px;
+                    }
                 }
 
                 .top-section {
@@ -123,9 +142,9 @@
                     line-height: 17px;
                     border: 1px solid #D8D8D8;
                     text-indent: 15px;
-              
+
                     &:focus-visible {
-                      outline: none;
+                        outline: none;
                     }
                 }
             }
@@ -143,5 +162,18 @@
                 margin-top: 42px;
             }
         }
+    }
+
+    input.ng-invalid {
+        border-color: var(--primary-red);
+    }
+
+    .error-message {
+        margin-top: 5px;
+        font-family: "Roboto";
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 11px;
+        color: var(--primary-red);
     }
 }
