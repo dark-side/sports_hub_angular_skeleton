@@ -1,24 +1,24 @@
 export const articles = [
     {
-        id: '/article/1',
+        id: 1,
         image_url: 'photo/main1.png',
         title: 'Rugby World Cup 2019 Trophy Tour reunites rugby legends in South Africa',
         short_description: 'Hundreds of rugby fans and a host of Springbok legends joined the celebration of rugby in South Africa this week on the 14th stop of the Rugby World Cup 2019 Trophy Tour.'
     },
     {
-        id: '/article/',
+        id: 2,
         image_url: 'photo/main2.png',
         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
         short_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
-        id: '/article/3',
+        id: 3,
         image_url: 'photo/main3.png',
         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
         short_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
-        id: '/article/4',
+        id: 4,
         image_url: 'photo/main4.png',
         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
         short_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -27,19 +27,19 @@ export const articles = [
 
 export const popular = [
     {
-        id: '/article/1',
+        id: 1,
         image_url: 'photo/popular1.png',
         title: 'Lorem ipsum',
         short_description: 'Lorem ipsum dolor sit amet, consectetur'
     },
     {
-        id: '/article/2',
+        id: 2,
         image_url: 'photo/popular2.png',
         title: 'Lorem ipsum',
         short_description: 'Lorem ipsum dolor sit amet, consectetur'
     },
     {
-        id: '/article/3',
+        id: 3,
         image_url: 'photo/popular3.png',
         title: 'Lorem ipsum',
         short_description: 'Lorem ipsum dolor sit amet, consectetur'
@@ -48,19 +48,19 @@ export const popular = [
 
 export const commented = [
     {
-        id: '/article/1',
+        id: 1,
         image_url: 'photo/commented1.png',
         title: 'Lorem ipsum',
         short_description: 'Lorem ipsum dolor sit amet, consectetur'
     },
     {
-        id: '/article/2',
+        id: 2,
         image_url: 'photo/commented2.png',
         title: 'Lorem ipsum',
         short_description: 'Lorem ipsum dolor sit amet, consectetur'
     },
     {
-        id: '/article/3',
+        id: 3,
         image_url: 'photo/commented3.png',
         title: 'Lorem ipsum',
         short_description: 'Lorem ipsum dolor sit amet, consectetur'
