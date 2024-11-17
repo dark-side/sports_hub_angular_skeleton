@@ -24,9 +24,6 @@
               "zone.js",
               "@angular/localize/init"
             ],
-            "ngxEnv": {
-              "prefix": ""
-            },
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [

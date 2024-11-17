@@ -1,6 +1,6 @@
 x-frontend-variables: &frontend-variables
   environment:
-    API_URL: http://localhost:3002
+    NG_APP_API_URL: http://localhost:3002
 
 version: '3.1'
 services:
