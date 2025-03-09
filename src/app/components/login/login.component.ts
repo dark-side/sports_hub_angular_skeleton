@@ -72,11 +72,14 @@ export class LoginComponent {
 
   logIn(): void {
     this.http.post(`${environment['API_URL']}api/auth/sign_in`, {
-      email: this.form.value.email,
-      password: this.form.value.password
+      user: { 
+        email: this.form.value.email,
+        password: this.form.value.password
+      }
     }).subscribe({
       next: (response: any) => {
         console.log('***********************login***************', response)
+        localStorage.setItem('authToken', response.data.authentication_token);
       },
       complete: () => {
         this.router.navigate(['/']);
