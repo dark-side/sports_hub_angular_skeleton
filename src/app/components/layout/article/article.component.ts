@@ -24,7 +24,7 @@ export class ArticleComponent {
 
   private getArticle() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.http.get(`${environment['API_URL']}/articles/${id}`).subscribe({
+    this.http.get(`${environment['API_URL']}api/articles/${id}`).subscribe({
       next: (article: any) => {
         this.article = article;
       },

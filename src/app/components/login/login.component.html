@@ -6,14 +6,13 @@
 </div>
 <div class="right">
     <div class="top">
-        <ng-container *ngIf="isLogin; else reverse">
-            <div class="text">Don’t have an account?</div>
+        @if (isLogin) {
+            <div class="text">Don't have an account?</div>
             <a class="button" routerLink="/sign-up">Get Started</a>
-        </ng-container>
-        <ng-template #reverse>
+        } @else {
             <div class="text">Already have an account?</div>
             <a class="button" routerLink="/log-in">Log in</a>
-        </ng-template>
+        }
     </div>
     <div class="main">
         <form class="section" [formGroup]="form" (submit)="onSave()">
@@ -26,48 +25,42 @@
                     <mat-icon svgIcon="gmail-circle" aria-hidden="false" aria-label="Gmail"></mat-icon>
                 </a>
             </div>
-            <ng-container *ngIf="!isLogin">
+            @if (!isLogin) {
                 <div class="top-title">Or use your email for registration:</div>
-                <div *ngIf="router.url.includes('sign-up')" class="input input-double">
-                    <div class="top-half">
-                        <div class="top-section">
-                            <div class="field-text">First name</div>
-                        </div>
-                        <input matInput formControlName="firstName">
-                        <div *ngIf="isInvalid('firstName')">
-                            <p class="error-message">Please enter a first name.</p>
-                        </div>
-                    </div>
-                    <div class="top-half">
-                        <div class="top-section">
-                            <div class="field-text">Last name</div>
-                        </div>
-                        <input matInput formControlName="lastName">
-                        <div *ngIf="isInvalid('lastName')">
-                            <p class="error-message">Please enter a last name.</p>
-                        </div>
-                    </div>
-                </div>
-            </ng-container>
+            }
             <div class="input">
                 <div class="top-section">
                     <div class="field-text">Email address</div>
                 </div>
                 <input matInput formControlName="email" type="email">
-                <div *ngIf="isInvalid('email')">
-                    <p class="error-message">Please enter a valid email address.</p>
-                </div>
+                @if (isInvalid('email')) {
+                  <p class="error-message">Please enter a valid email address.</p>
+                }
             </div>
             <div class="input">
                 <div class="top-section">
                     <div class="field-text">Password</div>
-                    <a class="forgot" routerLink="/forgot">Forgot password?</a>
+                    @if (isLogin) {
+                      <a class="forgot" routerLink="/forgot">Forgot password?</a>
+                    }
                 </div>
                 <input matInput formControlName="password" type="password">
-                <div *ngIf="isInvalid('password')">
+                @if (isInvalid('password')) {
                     <p class="error-message">Please enter a password.</p>
-                </div>
+                }
             </div>
+            @if (!isLogin) {
+                <div class="input">
+                    <div class="top-section">
+                        <div class="field-text
+                        ">Confirm password</div>
+                    </div>
+                    <input matInput formControlName="password_confirmation" type="password">
+                    @if (isInvalid('password_confirmation')) {
+                        <p class="error-message">Please enter a password.</p>
+                    }
+                </div>
+            }
             <button type="submit">Log in</button>
         </form>
     </div>

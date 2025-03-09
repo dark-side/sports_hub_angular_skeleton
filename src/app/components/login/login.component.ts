@@ -5,7 +5,7 @@ import { LogoComponent } from '../logo/logo.component';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 
 @Component({
   selector: 'ai-login',
@@ -35,20 +35,28 @@ export class LoginComponent {
   private createFormGroup(): void {
     const main = {
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      password: ['', [Validators.required, Validators.minLength(8)]]
     }
     if (!this.isLogin) {
       this.form = this.fb.group({
         ...main,
-        firstName: ['', Validators.required],
-        lastName: ['', Validators.required]
-      });
+        password_confirmation: ['', [Validators.required, Validators.minLength(8)]]
+      }, { validators: this.passwordMatchValidator });
       return;
     }
 
     this.form = this.fb.group({
       ...main
     });
+  }
+
+  private passwordMatchValidator(control: AbstractControl): ValidationErrors | null {
+    const password = control.get('password');
+    const passwordConfirmation = control.get('password_confirmation');
+    if (password && passwordConfirmation && password.value !== passwordConfirmation.value) {
+      return { passwordMismatch: true };
+    }
+    return null;
   }
 
   onSave(): void {
@@ -63,7 +71,7 @@ export class LoginComponent {
   }
 
   logIn(): void {
-    this.http.post(`${environment['API_URL']}/auth/login/`, {
+    this.http.post(`${environment['API_URL']}api/auth/sign_in`, {
       email: this.form.value.email,
       password: this.form.value.password
     }).subscribe({
@@ -77,16 +85,18 @@ export class LoginComponent {
   }
 
   signup(): void {
-    this.http.post(`${environment['API_URL']}/auth/signup/`, {
-      username: this.form.value.email,
-      email: this.form.value.email,
-      password: this.form.value.password
+    this.http.post(`${environment['API_URL']}users`, {
+      registration:{  
+        email: this.form.value.email,
+        password: this.form.value.password,
+        password_confirmation: this.form.value.password_confirmation,
+      }
     }).subscribe({
       next: (response: any) => {
         console.log('***********************signup***************', response)
       },
       complete: () => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/log-in']);
       }
     });
   }

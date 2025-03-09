@@ -34,7 +34,7 @@ export class NewsFeedComponent {
   }
 
   private getArticles() {
-    this.http.get(`${environment['API_URL']}/articles/`).subscribe({
+    this.http.get(`${environment['API_URL']}api/articles`).subscribe({
       next: (articles: any) => {
         this.articles = articles;
         this.popular = this.findMost('article_likes');
