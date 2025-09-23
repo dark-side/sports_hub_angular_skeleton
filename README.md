@@ -1,17 +1,22 @@
-# AngularjsFeGenaiPlgrnd
+# Sports-Hub Application Angular Front-End
 
 ## Project Description
 
-This is a draft pet project for testing Generative AI on different software engineering tasks. It is planned to evolve and grow over time. Specifically, this repo will be a Angular playground.
-For now, we only have the:
-[Ruby on Rails](https://github.com/rtriska/ruby_be_genai_plgrnd),
-[PHP](https://github.com/rtriska/php_be_genai_plgrnd),
-[Java](https://github.com/rtriska/java_be_genai_plgrnd),
-[.Net](https://github.com/rtriska/net_be_genai_plgrnd)
-applications as a Back-End, but we plan to extend it to other technologies in the future.
-This application can be started with a `docker compose` using the Back-End applications mentioned.
+This is a draft pet project for testing Generative AI on different software engineering tasks. It is planned to evolve and grow over time. Specifically, this repo will be an Angular playground.
 
 The application's legend is based on the sports-hub application description from the following repo: [Sports-Hub](https://github.com/dark-side/sports-hub).
+
+## Available Back-End applications
+[Ruby on Rails](https://github.com/dark-side/sports_hub_ruby_skeleton),
+[PHP](https://github.com/dark-side/sports_hub_php_skeleton),
+[Node.js](https://github.com/dark-side/sports_hub_nodejs_skeleton),
+[Java](https://github.com/dark-side/sports_hub_java_skeleton),
+[.Net](https://github.com/dark-side/sports_hub_net_skeleton),
+[C++](https://github.com/dark-side/sports_hub_cpp_skeleton),
+[Go](https://github.com/dark-side/sports_hub_go_skeleton),
+[Python](https://github.com/dark-side/sports_hub_python_skeleton)  
+
+This application can be started with a `docker compose` using the Back-End applications mentioned.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
 
@@ -41,6 +46,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 - Docker Compose
 
 The mentioned dependencies can be installed using the official documentation [here](https://docs.docker.com/compose/install/).
+[Podman](https://podman-desktop.io/docs/compose) can be used as an alternative to Docker.
 
 ## Setup and Running the Application
 
@@ -49,17 +55,29 @@ The mentioned dependencies can be installed using the official documentation [he
 To run the web application with the back-end, clone the following repository within the same folder:
 
 ```sh
-Ruby
-git clone git@github.com:rtriska/ruby_be_genai_plgrnd.git
+#Ruby
+git clone git@github.com:dark-side/sports_hub_ruby_skeleton.git
 
-PHP
-git clone git@github.com:rtriska/php_be_genai_plgrnd.git
+#PHP
+git clone git@github.com:dark-side/sports_hub_php_skeleton.git
 
-Java
-git clone git@github.com:rtriska/java_be_genai_plgrnd.git
+#Node.js
+git clone git@github.com:dark-side/sports_hub_nodejs_skeleton.git
 
-.Net
-git clone git@github.com:rtriska/net_be_genai_plgrnd.git
+#Java
+git clone git@github.com:dark-side/sports_hub_java_skeleton.git
+
+#.Net
+git clone git@github.com:dark-side/sports_hub_net_skeleton.git
+
+#C++
+git clone git@github.com:dark-side/sports_hub_cpp_skeleton.git
+
+#Go
+git clone git@github.com:dark-side/sports_hub_go_skeleton.git
+
+#Python
+git clone git@github.com:dark-side/sports_hub_python_skeleton.git
 ```
 
 ### Change Frontend
@@ -68,7 +86,7 @@ In docker-compose.yml at the back-end application directory change the front-end
 
 ```sh
   frontend:
-    build: ../angularjs_fe_genai_plgrnd <--- Here
+    build: ../sports_hub_angular_skeleton <--- Here
     depends_on:
       - backend
     ports:
@@ -79,10 +97,10 @@ In docker-compose.yml at the back-end application directory change the front-end
 
 ### Run Docker Compose
 
-Navigate to the back-end application directory and run:
+Navigate to the back-end application directory and run (`-d` for detached mode to run in the background):
 
 ```sh
-docker compose up
+docker compose up -d
 ```
 
 
