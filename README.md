@@ -7,14 +7,14 @@ This is a draft pet project for testing Generative AI on different software engi
 The application's legend is based on the sports-hub application description from the following repo: [Sports-Hub](https://github.com/dark-side/sports-hub).
 
 ## Available Back-End applications
-[Ruby on Rails](https://github.com/dark-side/sports_hub_ruby_skeleton),
-[PHP](https://github.com/dark-side/sports_hub_php_skeleton),
-[Node.js](https://github.com/dark-side/sports_hub_nodejs_skeleton),
-[Java](https://github.com/dark-side/sports_hub_java_skeleton),
-[.Net](https://github.com/dark-side/sports_hub_net_skeleton),
-[C++](https://github.com/dark-side/sports_hub_cpp_skeleton),
-[Go](https://github.com/dark-side/sports_hub_go_skeleton),
-[Python](https://github.com/dark-side/sports_hub_python_skeleton)  
+- [Ruby on Rails](https://github.com/dark-side/sports_hub_ruby_skeleton),
+- [PHP](https://github.com/dark-side/sports_hub_php_skeleton),
+- [Node.js](https://github.com/dark-side/sports_hub_nodejs_skeleton),
+- [Java](https://github.com/dark-side/sports_hub_java_skeleton),
+- [.Net](https://github.com/dark-side/sports_hub_net_skeleton),
+- [C++](https://github.com/dark-side/sports_hub_cpp_skeleton),
+- [Go](https://github.com/dark-side/sports_hub_go_skeleton),
+- [Python](https://github.com/dark-side/sports_hub_python_skeleton)
 
 This application can be started with a `docker compose` using the Back-End applications mentioned.
 
