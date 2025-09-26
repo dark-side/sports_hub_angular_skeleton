@@ -46,7 +46,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 - Docker Compose
 
 The mentioned dependencies can be installed using the official documentation [here](https://docs.docker.com/compose/install/).
-[Podman](https://podman-desktop.io/docs/compose) can be used as an alternative to Docker.
+Read more about alternatives to Docker [here](https://github.com/dark-side/sports_hub_angular_skeleton/blob/main/READMORE_DockerAlternatives.md).
 
 ## Setup and Running the Application
 
