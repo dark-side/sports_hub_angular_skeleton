@@ -18,7 +18,6 @@ podman compose up -d
 ```
 
 [Podman Desktop](https://podman-desktop.io) is Podman's graphical application that makes it easy to install and work with Podman and other container engines.
-
 Manage containers (not just Podman), build, pull, and push images, podify containers into pods, and deploy to Kubernetes easily.
 
 ## Containerd
@@ -42,6 +41,7 @@ nerdctl compose up -d
 Rancher is open-source and provided under Apache License 2.0. While Rancher Prime is an enterprise version with additional features and support built on top of the open-source version.
 
 [Rancher Desktop](https://www.rancher.com/products/rancher-desktop) lets developers easily run Kubernetes on their desktop. Select the right Kubernetes version with just a few clicks. Build, push, pull, and run container images using either the Docker CLI (with Moby/dockerd) or nerdctl (with containerd).
+
 Rancher is available for Windows, Mac, and Linux.
 
 Usage example for dark-side projects:
