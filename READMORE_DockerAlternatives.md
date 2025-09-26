@@ -41,7 +41,7 @@ nerdctl compose up -d
 [Rancher](https://www.rancher.com) by [SUSE](https://www.suse.com) is a complete software stack for teams adopting containers. It addresses the operational and security challenges of managing multiple Kubernetes clusters, while providing DevOps teams with integrated tools for running containerized workloads.
 Rancher is open-source and provided under Apache License 2.0. While Rancher Prime is an enterprise version with additional features and support built on top of the open-source version.
 
-[Rancher Desktop](hhttps://www.rancher.com/products/rancher-desktop) lets developers easily run Kubernetes on their desktop. Select the right Kubernetes version with just a few clicks. Build, push, pull, and run container images using either the Docker CLI (with Moby/dockerd) or nerdctl (with containerd).
+[Rancher Desktop](https://www.rancher.com/products/rancher-desktop) lets developers easily run Kubernetes on their desktop. Select the right Kubernetes version with just a few clicks. Build, push, pull, and run container images using either the Docker CLI (with Moby/dockerd) or nerdctl (with containerd).
 Rancher is available for Windows, Mac, and Linux.
 
 Usage example for dark-side projects:
